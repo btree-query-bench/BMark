@@ -38,27 +38,27 @@ func (l *ListIndex) Insert(key, value []byte) error {
 	return nil
 }
 
-func (l ListIndex) Get(key []byte) ([]byte, error) {
+func (l *ListIndex) Get(key []byte) ([]byte, error) {
 	panic("implement me")
 }
 
-func (l ListIndex) Delete(key []byte) error {
+func (l *ListIndex) Delete(key []byte) error {
 	panic("implement me")
 }
 
-func (l ListIndex) Range(start, end []byte) (index.Iterator, error) {
+func (l *ListIndex) Range(start, end []byte) (index.Iterator, error) {
 	panic("implement me")
 }
 
-func (l ListIndex) SaveTo(path string) error {
+func (l *ListIndex) SaveTo(path string) error {
 	panic("implement me")
 }
 
-func (l ListIndex) LoadFrom(path string) error {
+func (l *ListIndex) LoadFrom(path string) error {
 	panic("implement me")
 }
 
-func (l ListIndex) search(key []byte) ([]byte, int, bool) {
+func (l *ListIndex) search(key []byte) ([]byte, int, bool) {
 	for i, data := range l.data {
 		if bytes.Equal(data.key, key) {
 			return data.val, i, true
