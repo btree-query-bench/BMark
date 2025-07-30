@@ -1,4 +1,4 @@
-ANTLR_JAR=lib/antlr-complete.jar
+ANTLR_JAR=antlr/antlr-complete.jar
 GRAMMAR=QueryLang.g4
 OUT_DIR=antlr
 PACKAGE=antlr
