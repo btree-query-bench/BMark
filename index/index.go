@@ -1,6 +1,6 @@
 package index
 
-type Tree interface {
+type Index interface {
 	Insert(key, value []byte) error
 	Get(key []byte) ([]byte, error)
 	Delete(key []byte) error

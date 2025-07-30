@@ -5,7 +5,7 @@ import (
 	"github.com/btree-query-bench/bmark/persist"
 )
 
-var _ index.Tree = (*BPlusTree)(nil)
+var _ index.Index = (*BPlusTree)(nil)
 
 type BPlusTree struct {
 	p    int
