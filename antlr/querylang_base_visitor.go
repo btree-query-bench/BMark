@@ -7,7 +7,7 @@ type BaseQueryLangVisitor struct {
 	*antlr.BaseParseTreeVisitor
 }
 
-func (v *BaseQueryLangVisitor) VisitCommand(ctx *CommandContext) interface{} {
+func (v *BaseQueryLangVisitor) VisitQuery(ctx *QueryContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -15,7 +15,11 @@ func (v *BaseQueryLangVisitor) VisitCreateBenchmark(ctx *CreateBenchmarkContext)
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseQueryLangVisitor) VisitInsertAll(ctx *InsertAllContext) interface{} {
+func (v *BaseQueryLangVisitor) VisitSearch(ctx *SearchContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseQueryLangVisitor) VisitModify(ctx *ModifyContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -23,15 +27,11 @@ func (v *BaseQueryLangVisitor) VisitInsert(ctx *InsertContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseQueryLangVisitor) VisitLookup(ctx *LookupContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
 func (v *BaseQueryLangVisitor) VisitDelete(ctx *DeleteContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseQueryLangVisitor) VisitCompareLookup(ctx *CompareLookupContext) interface{} {
+func (v *BaseQueryLangVisitor) VisitStart(ctx *StartContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 

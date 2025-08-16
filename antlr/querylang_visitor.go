@@ -7,26 +7,26 @@ import "github.com/antlr4-go/antlr/v4"
 type QueryLangVisitor interface {
 	antlr.ParseTreeVisitor
 
-	// Visit a parse tree produced by QueryLangParser#command.
-	VisitCommand(ctx *CommandContext) interface{}
+	// Visit a parse tree produced by QueryLangParser#query.
+	VisitQuery(ctx *QueryContext) interface{}
 
 	// Visit a parse tree produced by QueryLangParser#createBenchmark.
 	VisitCreateBenchmark(ctx *CreateBenchmarkContext) interface{}
 
-	// Visit a parse tree produced by QueryLangParser#insertAll.
-	VisitInsertAll(ctx *InsertAllContext) interface{}
+	// Visit a parse tree produced by QueryLangParser#search.
+	VisitSearch(ctx *SearchContext) interface{}
+
+	// Visit a parse tree produced by QueryLangParser#modify.
+	VisitModify(ctx *ModifyContext) interface{}
 
 	// Visit a parse tree produced by QueryLangParser#insert.
 	VisitInsert(ctx *InsertContext) interface{}
 
-	// Visit a parse tree produced by QueryLangParser#lookup.
-	VisitLookup(ctx *LookupContext) interface{}
-
 	// Visit a parse tree produced by QueryLangParser#delete.
 	VisitDelete(ctx *DeleteContext) interface{}
 
-	// Visit a parse tree produced by QueryLangParser#compareLookup.
-	VisitCompareLookup(ctx *CompareLookupContext) interface{}
+	// Visit a parse tree produced by QueryLangParser#start.
+	VisitStart(ctx *StartContext) interface{}
 
 	// Visit a parse tree produced by QueryLangParser#dataList.
 	VisitDataList(ctx *DataListContext) interface{}
