@@ -25,19 +25,19 @@ func NewBTree(t int) *BTree {
 	}
 }
 
-func (bt *BTree) Insert(key, value []byte) error {
+func (bt *BTree) Insert(key, value int64) error {
 	panic("implement me")
 }
 
-func (bt *BTree) Get(key []byte) ([]byte, error) {
+func (bt *BTree) Get(key int64) (int64, error) {
 	panic("implement me")
 }
 
-func (bt *BTree) Delete(key []byte) error {
+func (bt *BTree) Delete(key int64) error {
 	panic("implement me")
 }
 
-func (bt *BTree) Range(start, end []byte) (index.Iterator, error) {
+func (bt *BTree) Range(start, end int64) (index.Iterator, error) {
 	panic("implement me")
 }
 func (bt *BTree) SaveTo(path string) error {
